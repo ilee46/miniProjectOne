@@ -29,7 +29,11 @@ function draw() {
         rect((windowWidth/2),(windowHeight/6)*j,windowWidth/2,windowHeight/6);
     }
     for (let n = 0; n < 39; n++) {
-        fill(random(255));
+        if (n % 2 == 0) {
+            fill(0);
+        } else {
+            fill(255);
+        }
         triangle((0)+25*n, 0, windowWidth/2, (windowHeight)-25*n, (windowWidth)-25*n, 0);
     }
 }
